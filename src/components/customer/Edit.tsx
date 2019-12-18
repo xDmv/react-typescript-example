@@ -54,10 +54,10 @@ class EditCustomer extends React.Component<RouteComponentProps<any>, IFormState>
     }
 
     public render() {
-        const { submitSuccess, loading } = this.state;
+        const { submitSuccess, loading, customer } = this.state;
         return (
             <div className="App">
-                {this.state.customer &&
+                {customer &&
                     <div>
                         < h1 > Customer List Management App</h1>
                         <p> Built with React.js and TypeScript </p>
@@ -75,32 +75,32 @@ class EditCustomer extends React.Component<RouteComponentProps<any>, IFormState>
                                 <form id={"create-post-form"} onSubmit={this.processFormSubmission} noValidate={true}>
                                     <div className="form-group col-md-12">
                                         <label htmlFor="first_name"> First Name </label>
-                                        <input type="text" id="first_name" defaultValue={this.state.customer.first_name} onChange={(e) => this.handleInputChanges(e)} name="first_name" className="form-control" placeholder="Enter customer's first name" />
+                                        <input type="text" id="first_name" defaultValue={customer.first_name} onChange={(e) => this.handleInputChanges(e)} name="first_name" className="form-control" placeholder="Enter customer's first name" />
                                     </div>
 
                                     <div className="form-group col-md-12">
                                         <label htmlFor="last_name"> Last Name </label>
-                                        <input type="text" id="last_name" defaultValue={this.state.customer.last_name} onChange={(e) => this.handleInputChanges(e)} name="last_name" className="form-control" placeholder="Enter customer's last name" />
+                                        <input type="text" id="last_name" defaultValue={customer.last_name} onChange={(e) => this.handleInputChanges(e)} name="last_name" className="form-control" placeholder="Enter customer's last name" />
                                     </div>
 
                                     <div className="form-group col-md-12">
                                         <label htmlFor="email"> Email </label>
-                                        <input type="email" id="email" defaultValue={this.state.customer.email} onChange={(e) => this.handleInputChanges(e)} name="email" className="form-control" placeholder="Enter customer's email address" />
+                                        <input type="email" id="email" defaultValue={customer.email} onChange={(e) => this.handleInputChanges(e)} name="email" className="form-control" placeholder="Enter customer's email address" />
                                     </div>
 
                                     <div className="form-group col-md-12">
                                         <label htmlFor="phone"> Phone </label>
-                                        <input type="text" id="phone" defaultValue={this.state.customer.phone} onChange={(e) => this.handleInputChanges(e)} name="phone" className="form-control" placeholder="Enter customer's phone number" />
+                                        <input type="text" id="phone" defaultValue={customer.phone} onChange={(e) => this.handleInputChanges(e)} name="phone" className="form-control" placeholder="Enter customer's phone number" />
                                     </div>
 
                                     <div className="form-group col-md-12">
                                         <label htmlFor="address"> Address </label>
-                                        <input type="text" id="address" defaultValue={this.state.customer.address} onChange={(e) => this.handleInputChanges(e)} name="address" className="form-control" placeholder="Enter customer's address" />
+                                        <input type="text" id="address" defaultValue={customer.address} onChange={(e) => this.handleInputChanges(e)} name="address" className="form-control" placeholder="Enter customer's address" />
                                     </div>
 
                                     <div className="form-group col-md-12">
                                         <label htmlFor="description"> Description </label>
-                                        <input type="text" id="description" defaultValue={this.state.customer.description} onChange={(e) => this.handleInputChanges(e)} name="description" className="form-control" placeholder="Enter Description" />
+                                        <input type="text" id="description" defaultValue={customer.description} onChange={(e) => this.handleInputChanges(e)} name="description" className="form-control" placeholder="Enter Description" />
                                     </div>
 
                                     <div className="form-group col-md-4 pull-right">

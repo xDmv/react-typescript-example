@@ -28,7 +28,7 @@ export default class Home extends React.Component<RouteComponentProps, IState> {
     }
 
     public render() {
-        const customers = this.state.customers;
+        const { customers } = this.state;
         return (
             <div>
                 {customers.length === 0 && (
