@@ -7,3 +7,6 @@ example project on React to typescript
 ### 3) `npm or yarn install`
 ### 4) `npm or yarn server`
 ### 5) `npm or yarn start`
+
+Server open [http://localhost:5000]
+App open [http://localhost:3000]
